@@ -1,0 +1,170 @@
+baseURL = 'http://huangdaolang.com/'
+languageCode = 'en-us'
+
+theme = 'LoveIt'
+
+[author]
+  name = "Daolang"
+  email = "daolang.huang@aalto.fi"
+
+[params]
+  defaultTheme = "auto"
+  title = "Daolang Huang"
+
+  [params.header]
+    # desktop header mode ["fixed", "normal", "auto"]
+    desktopMode = "fixed"
+    # mobile header mode ["fixed", "normal", "auto"]
+    mobileMode = "auto"
+
+    [params.header.title]
+      # LOGO 的 URL
+      logo = ""
+      # 标题名称
+      name = " Daolang Huang"
+      # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+      pre = ""
+      # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+      post = ""
+      # 是否为标题显示打字机动画
+      typeit = false
+
+
+  # 页面底部信息配置
+  [params.footer]
+    enable = false
+    # 自定义内容 (支持 HTML 格式)
+    custom = ""
+    # 是否显示 Hugo 和主题信息
+    hugo = false
+    # 是否显示版权信息
+    copyright = true
+    # 是否显示作者
+    author = true
+    # 网站创立年份
+    since = 2023
+
+  # Section (所有文章) 页面配置
+  [params.section]
+    # section 页面每页显示文章数量
+    paginate = 20
+    # 日期格式 (月和日)
+    dateFormat = "01-02"
+    # RSS 文章数目
+    rss = 10
+
+  # List (目录或标签) 页面配置
+  [params.list]
+    # list 页面每页显示文章数量
+    paginate = 20
+    # 日期格式 (月和日)
+    dateFormat = "01-02"
+    # RSS 文章数目
+    rss = 10
+
+  # 搜索配置
+  [params.search]
+    enable = true
+    # 搜索引擎的类型 ["lunr", "algolia"]
+    type = "lunr"
+    # 文章内容最长索引长度
+    contentLength = 4000
+    # 搜索框的占位提示语
+    placeholder = ""
+    # 最大结果数目
+    maxResultLength = 10
+    # 结果内容片段长度
+    snippetLength = 30
+    # 搜索结果中高亮部分的 HTML 标签
+    highlightTag = "em"
+    # 是否在搜索索引中使用基于 baseURL 的绝对路径
+    absoluteURL = false
+
+  # 主页信息设置
+  [params.home]
+    # RSS 文章数目
+    rss = 10
+    # 主页个人信息
+    [params.home.profile]
+      enable = true
+      # 主页显示头像的 URL
+      avatarURL = "/avatar_1.jpg"
+      # 主页显示的网站标题 (支持 HTML 格式)
+      title = "Daolang Huang"
+      # 主页显示的网站副标题 (允许 HTML 格式)
+      subtitle = "PhD Student at Aalto University"
+      # 是否为副标题显示打字机动画
+      typeit = false
+      # 是否显示社交账号
+      social = true
+      # 免责声明 (支持 HTML 格式)
+      disclaimer = ""
+
+    # Home page posts
+    # 主页文章列表
+    [params.home.posts]
+      enable = false
+      # 主页每页显示文章数量
+      paginate = 6
+
+
+[menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "posts"
+    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+    pre = ""
+    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+    post = ""
+    name = "News"
+    url = "/posts/"
+    # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
+    title = "news"
+  [[menu.main]]
+    weight = 2
+    identifier = "paper"
+    pre = ""
+    post = ""
+    name = "Publications"
+    url = "/paper/"
+    title = "paper"
+  [[menu.main]]
+    weight = 3
+    identifier = "musics"
+    pre = "<img src='/logo.png' alt='Personal Logo' style='max-height:17.5px; vertical-align:text-bottom;'>"
+    post = ""
+    name = "Music"
+    url = "/music/"
+    title = "RGB music"
+  [[menu.main]]
+    weight = 4
+    identifier = "cv"
+    pre = ""
+    post = ""
+    name = "CV"
+    url = "/cv.pdf"
+    title = "My CV"
+  [[menu.main]]
+    weight = 5
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "About"
+    url = "/about/"
+    title = ""
+
+
+[params.social]
+    GitHub = "huangdaolang"
+    Email = "daolang.huang@aalto.fi"
+    Googlescholar = "user=2togGHoAAAAJ"
+    Twitter = "DaolangHuang"
+    Zhihu = "donaldhwang"
+    Linkedin = "daolanghuang"
+
+# Hugo 解析文档的配置
+[markup]
+  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
