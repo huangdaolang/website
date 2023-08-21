@@ -1,6 +1,6 @@
 # 2023
 
-- **D Huang***, A Bharti*, A Souza, L Acerbi, S Kaski. “Learning Robust Statistics for Simulation-based Inference under Model Misspecification”. *arXiv:2305.15871*. ([pdf](https://arxiv.org/abs/2305.15871))
+- **D Huang**, A Bharti, A Souza, L Acerbi, S Kaski. “Learning Robust Statistics for Simulation-based Inference under Model Misspecification”. *arXiv:2305.15871*. ([pdf](https://arxiv.org/abs/2305.15871))
 
 - **D Huang**, M Haussmann, U Remes, ST John, G Clarté, KS Luck, S Kaski, L Acerbi. "Practical Equivariances via Relational Conditional Neural Processes". *arXiv:2306.10915*. ([pdf](https://arxiv.org/abs/2306.10915))
 
