@@ -1,6 +1,6 @@
 baseURL = 'http://huangdaolang.com/'
 languageCode = 'en-us'
-
+title = "Daolang Huang"
 theme = 'LoveIt'
 
 [author]
