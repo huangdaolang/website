@@ -1,7 +1,7 @@
 ---
 title: "ELLIS Doctoral Symposium 2023"
-date: 2023-08-17T16:31:41+03:00
-draft: true
+date: 2023-08-28
+draft: false
 ---
 
-hello world
+I will attend EDS 2023 in Otaniemi campus. I will present our work "Learning robust statistics for simulation-based inference under model misspecification" at the poster session. And give an introduction about FCAI amortized inference team at FCAI outreach event.
