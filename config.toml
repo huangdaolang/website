@@ -118,7 +118,6 @@ theme = 'LoveIt'
     post = ""
     name = "News"
     url = "/news/"
-    # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
     title = "news"
   [[menu.main]]
     weight = 2
