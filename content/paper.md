@@ -1,8 +1,9 @@
 # 2023
 
-- **D Huang**\*, A Bharti\*, A Souza, L Acerbi, S Kaski. “Learning Robust Statistics for Simulation-based Inference under Model Misspecification”. *arXiv:2305.15871*. ([pdf](https://arxiv.org/abs/2305.15871))
+- **D Huang**\*, A Bharti\*, A Souza, L Acerbi, S Kaski. "Learning Robust Statistics for Simulation-based Inference under Model Misspecification". *NeurIPS 2023*. ([pdf](https://arxiv.org/abs/2305.15871))
 
-- **D Huang**, M Haussmann, U Remes, ST John, G Clarté, KS Luck, S Kaski, L Acerbi. "Practical Equivariances via Relational Conditional Neural Processes". *arXiv:2306.10915*. ([pdf](https://arxiv.org/abs/2306.10915))
+- **D Huang**, M Haussmann, U Remes, ST John, G Clart??, KS Luck, S Kaski, L Acerbi. "Practical Equivariances via Relational Conditional Neural Processes". *NeurIPS 2023*. 
+([pdf](https://arxiv.org/abs/2306.10915))
 
 - **D Huang**, L Filstroff, P Mikkola, M Todorovic, S Kaski. "Augmenting Bayesian Optimization with Preference-based Expert Feedback". *ICML Workshop 2023 (The Many Facets of Preference-based Learning)*. ([pdf](https://arxiv.org/abs/2208.08742))
 
