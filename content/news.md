@@ -1,4 +1,5 @@
 # News
+- **2023.11.8**: Gave a talk about our [RCNP](https://arxiv.org/abs/2306.10915) paper at [Finland AI day 2023](https://fcai.fi/ai-day-2023).
 - **2023.9.23**: Attended the [Ellis RobustML Workshop](https://sites.google.com/view/ellis-robust-ml-workshop/home).
 - **2023.9.22**: Two of our papers have been accepted by NeurIPS 2023!
 	- [Learning robust statistics for simulation-based inference under model misspecification](https://arxiv.org/abs/2305.15871) 
