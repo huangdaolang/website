@@ -135,14 +135,14 @@ theme = 'LoveIt'
     name = "Music"
     url = "/music/"
     title = "RGB music"
-#  [[menu.main]]
-#    weight = 4
-#    identifier = "cv"
-#    pre = ""
-#    post = ""
-#    name = "CV"
-#    url = "/cv.pdf"
-#    title = "My CV"
+  [[menu.main]]
+    weight = 4
+    identifier = "cv"
+    pre = ""
+    post = ""
+    name = "CV"
+    url = "/cv.pdf"
+    title = "My CV"
   [[menu.main]]
     weight = 5
     identifier = "tags"
