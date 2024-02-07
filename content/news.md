@@ -1,4 +1,5 @@
 # News
+- **2023.12.17**: Had a great week at NeurIPS in New Orleans.
 - **2023.11.21**: Gave a talk about conditional neural processes at the *Mathematical perspective on machine learning seminar* at the University of Helsinki.
 - **2023.11.8**: Gave a talk about our [RCNP](https://arxiv.org/abs/2306.10915) paper at [Finland AI day 2023](https://fcai.fi/ai-day-2023).
 - **2023.9.23**: Attended the [Ellis RobustML Workshop](https://sites.google.com/view/ellis-robust-ml-workshop/home).
