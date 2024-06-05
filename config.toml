@@ -88,11 +88,11 @@ theme = 'LoveIt'
     [params.home.profile]
       enable = true
       # 主页显示头像的 URL
-      avatarURL = "/avatar_1.jpg"
+      avatarURL = "/avatar.png"
       # 主页显示的网站标题 (支持 HTML 格式)
       title = "Daolang Huang"
       # 主页显示的网站副标题 (允许 HTML 格式)
-      subtitle = "PhD Student at Aalto University"
+      subtitle = "\"Amortize everything...\""
       # 是否为副标题显示打字机动画
       typeit = false
       # 是否显示社交账号
@@ -109,16 +109,16 @@ theme = 'LoveIt'
 
 
 [menu]
-  [[menu.main]]
-    weight = 1
-    identifier = "news"
-    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-    pre = ""
-    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-    post = ""
-    name = "News"
-    url = "/news/"
-    title = "news"
+#  [[menu.main]]
+#    weight = 1
+#    identifier = "news"
+#    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+#    pre = ""
+#    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+#    post = ""
+#    name = "News"
+#    url = "/news/"
+#    title = "news"
   [[menu.main]]
     weight = 2
     identifier = "paper"
@@ -135,22 +135,22 @@ theme = 'LoveIt'
     name = "Music"
     url = "/music/"
     title = "RGB music"
-  [[menu.main]]
-    weight = 4
-    identifier = "cv"
-    pre = ""
-    post = ""
-    name = "CV"
-    url = "/cv.pdf"
-    title = "My CV"
-  [[menu.main]]
-    weight = 5
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "About"
-    url = "/about/"
-    title = ""
+#  [[menu.main]]
+#    weight = 4
+#    identifier = "cv"
+#    pre = ""
+#    post = ""
+#    name = "CV"
+#    url = "/cv.pdf"
+#    title = "My CV"
+#  [[menu.main]]
+#    weight = 5
+#    identifier = "tags"
+#    pre = ""
+#    post = ""
+#    name = "About"
+#    url = "/about/"
+#    title = ""
 
 
 [params.social]

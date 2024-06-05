@@ -1,0 +1,33 @@
+// ==============================
+// Custom style
+// 自定义样式
+// ==============================
+// 确保主页上的 news 部分和 about 部分具有一致的链接样式
+.page.home .news-content a,
+.page.home .about-content a {
+  color: $single-link-color; // 确保与单个页面链接颜色一致
+  text-decoration: none;
+
+  &:hover {
+    color: $single-link-hover-color; // 确保与单个页面链接悬停颜色一致
+    text-decoration: underline;
+  }
+}
+
+.page.home .news-content b, .page.home .news-content strong,
+.page.home .about-content b, .page.home .about-content strong {
+  font-weight: bold;
+
+  [theme=dark] & {
+    color: #ddd;
+  }
+}
+
+.page.home .news-content a:hover b, .page.home .news-content a:hover strong,
+.page.home .about-content a:hover b, .page.home .about-content a:hover strong {
+  color: $single-link-hover-color; // 确保与单个页面链接悬停加粗颜色一致
+}
+
+.home-news {
+  margin-top: 3rem; /* 调整这个值来增加或减少间距 */
+}
