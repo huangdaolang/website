@@ -10,6 +10,7 @@ theme = 'LoveIt'
 [params]
   defaultTheme = "auto"
   title = "Daolang Huang"
+  description = "Daolang Huang's personal website"
 
   [params.header]
     # desktop header mode ["fixed", "normal", "auto"]
