@@ -23,7 +23,10 @@
             <h2>About</h2>
             {{ with .Site.GetPage "about.md" }}
                 <div class="about-content">
-                    {{ .Content }}
+                    <div class="justify-text">
+                        {{ .Content }}
+                    </div>
+
                 </div>
             {{ end }}
         </section>
