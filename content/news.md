@@ -3,6 +3,7 @@ title: "News"
 type: "page"
 ---
 
+- **2024.09**: Our paper "Amortized Bayesian experimental design for decision-making" has been accepted by *NeurIPS 2024*!
 - **2023.12**: Had a great week at NeurIPS in New Orleans.
 - **2023.11**: Gave a talk about conditional neural processes at the *Mathematical perspective on machine learning seminar* at the University of Helsinki. [[Slides](/slides/rcnp_math_ml_seminar.pdf)]
 - **2023.11**: Gave a talk about our [RCNP](https://arxiv.org/abs/2306.10915) paper at [Finland AI day 2023](https://fcai.fi/ai-day-2023).
