@@ -2,7 +2,7 @@
 
 - **D Huang**, Y Guo, L Acerbi, S kaski. "Amortized Bayesian Experimental Design for Decision-Making". ***NeurIPS 2024***.
 
-- **A Bharti**, **D Huang**, S Kaski, F-X Briol. "Cost-aware Simulation-based Inference". ***arxiv preprint arXiv:2410.07930***.
+- A Bharti, **D Huang**, S Kaski, F-X Briol. "Cost-aware Simulation-based Inference". ***arxiv preprint arXiv:2410.07930***.
 
 # 2023
 
