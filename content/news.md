@@ -3,6 +3,7 @@ title: "News"
 type: "page"
 ---
 
+- **2024.10**: Our paper "Cost-aware simulation-based inference" is now available on [arXiv](https://arxiv.org/abs/2410.07930).
 - **2024.09**: Our paper "Amortized Bayesian experimental design for decision-making" has been accepted by *NeurIPS 2024*!
 - **2023.12**: Had a great week at NeurIPS in New Orleans.
 - **2023.11**: Gave a talk about conditional neural processes at the *Mathematical perspective on machine learning seminar* at the University of Helsinki. [[Slides](/slides/rcnp_math_ml_seminar.pdf)]

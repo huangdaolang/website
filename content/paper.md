@@ -2,6 +2,8 @@
 
 - **D Huang**, Y Guo, L Acerbi, S kaski. "Amortized Bayesian Experimental Design for Decision-Making". ***NeurIPS 2024***.
 
+- **A Bharti**, **D Huang**, S Kaski, F-X Briol. "Cost-aware Simulation-based Inference". ***arxiv preprint arXiv:2410.07930***.
+
 # 2023
 
 - **D Huang**\*, A Bharti\*, A Souza, L Acerbi, S Kaski. "Learning Robust Statistics for Simulation-based Inference under Model Misspecification". ***NeurIPS 2023***. ([paper](https://proceedings.neurips.cc/paper_files/paper/2023/hash/16c5b4102a6b6eb061e502ce6736ad8a-Abstract-Conference.html), [code](https://github.com/huangdaolang/robust-sbi), [website](https://neurips.cc/virtual/2023/poster/71604), [poster](https://neurips.cc/media/PosterPDFs/NeurIPS%202023/71604.png?t=1701420634.256249))
