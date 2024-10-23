@@ -3,6 +3,8 @@ title: "News"
 type: "page"
 ---
 
+- **2024.10**: Amortized conditioning engine is online! Check it out [here](https://arxiv.org/abs/2410.15320).
+- **2024.10**: I have been selected as one of the top 3 nominees for the [AI Researcher of the Year](https://aifinland.fi/ai-gaala-2024-finalistit-julki-tassa-ovat-suomen-tekoalykentan-karkinimet-ja-kayttotapaukset/) by AI Finland.
 - **2024.10**: Our paper "Cost-aware simulation-based inference" is now available on [arXiv](https://arxiv.org/abs/2410.07930).
 - **2024.09**: Our paper "Amortized Bayesian experimental design for decision-making" has been accepted by *NeurIPS 2024*!
 - **2023.12**: Had a great week at NeurIPS in New Orleans.
