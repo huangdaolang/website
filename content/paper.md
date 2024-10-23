@@ -2,9 +2,9 @@
 
 - **D Huang**, Y Guo, L Acerbi, S kaski. "Amortized Bayesian Experimental Design for Decision-Making". ***NeurIPS 2024***.
 
-- P Chang\*, N Loka\*, **D Huang**\*, U Remes, S Kaski, L Acerbi. "Amortized Probabilistic Conditioning for Optimization, Simulation and Inference". ***arXiv preprint:2410.15320***. 
+- P Chang\*, N Loka\*, **D Huang**\*, U Remes, S Kaski, L Acerbi. "Amortized Probabilistic Conditioning for Optimization, Simulation and Inference". ***arXiv:2410.15320***. 
 
-- A Bharti, **D Huang**, S Kaski, F-X Briol. "Cost-aware Simulation-based Inference". ***arXiv preprint:2410.07930***.
+- A Bharti, **D Huang**, S Kaski, F-X Briol. "Cost-aware Simulation-based Inference". ***arXiv:2410.07930***.
 
 # 2023
 
