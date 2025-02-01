@@ -1,12 +1,12 @@
 # 2024
 
-- **D Huang**, Y Guo, L Acerbi, S kaski. "Amortized Bayesian Experimental Design for Decision-Making". ***NeurIPS 2024***.
-
-- X Zhang, **D Huang**, S Kaski, J Martinelli. "PABBO: Preferential Amortized Black-Box Optimization". ***ICLR 2025***.
+- X Zhang\*, **D Huang**\*, S Kaski, J Martinelli. "PABBO: Preferential Amortized Black-Box Optimization". ***ICLR 2025***.
 
 - P Chang\*, N Loka\*, **D Huang**\*, U Remes, S Kaski, L Acerbi. "Amortized Probabilistic Conditioning for Optimization, Simulation and Inference". ***AISTATS 2025***. 
 
 - A Bharti, **D Huang**, S Kaski, F-X Briol. "Cost-aware Simulation-based Inference". ***AISTATS 2025***.
+
+- **D Huang**, Y Guo, L Acerbi, S kaski. "Amortized Bayesian Experimental Design for Decision-Making". ***NeurIPS 2024***.
 
 # 2023
 
