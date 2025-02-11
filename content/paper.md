@@ -1,6 +1,6 @@
 # 2024
 
-- X Zhang\*, **D Huang**\*, S Kaski, J Martinelli. "PABBO: Preferential Amortized Black-Box Optimization". ***ICLR 2025***.
+- X Zhang\*, **D Huang**\*, S Kaski, J Martinelli. "PABBO: Preferential Amortized Black-Box Optimization". ***ICLR 2025 (Spotlight)***.
 
 - P Chang\*, N Loka\*, **D Huang**\*, U Remes, S Kaski, L Acerbi. "Amortized Probabilistic Conditioning for Optimization, Simulation and Inference". ***AISTATS 2025***. 
 
