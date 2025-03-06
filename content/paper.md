@@ -1,3 +1,8 @@
+# 2025
+
+- P Chang, Severi R, N Loka, **D Huang**, L Acerbi. "Inference-Time Prior Adaptation in Simulation-Based Inference via Guided Diffusion Models". ***ICLR Workshop 2025 on Frontiers in Probabilistic Inference:
+Sampling Meets Learning***.
+
 # 2024
 
 - X Zhang\*, **D Huang**\*, S Kaski, J Martinelli. "PABBO: Preferential Amortized Black-Box Optimization". ***ICLR 2025 (Spotlight)***.
