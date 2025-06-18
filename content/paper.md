@@ -1,17 +1,19 @@
 # 2025
 
+- **D Huang**, X Wen, A Bharti, S Kaski\*, L Acerbi\*. “ALINE: Joint Amortization for Bayesian Inference and Active Data Acquisition”.  arXiv:2506.07259.
+
 - P Chang, Severi R, N Loka, **D Huang**, L Acerbi. "Inference-Time Prior Adaptation in Simulation-Based Inference via Guided Diffusion Models". ***ICLR Workshop 2025 on Frontiers in Probabilistic Inference:
 Sampling Meets Learning***.
 
 # 2024
 
-- X Zhang\*, **D Huang**\*, S Kaski, J Martinelli. "PABBO: Preferential Amortized Black-Box Optimization". ***ICLR 2025 (Spotlight)***.
+- X Zhang\*, **D Huang**\*, S Kaski, J Martinelli. "PABBO: Preferential Amortized Black-Box Optimization". ***ICLR 2025 (Spotlight)***. ([paper](https://openreview.net/forum?id=YhfrKB3Ah7), [code](https://github.com/xinyuzc/PABBO))
 
-- P Chang\*, N Loka\*, **D Huang**\*, U Remes, S Kaski, L Acerbi. "Amortized Probabilistic Conditioning for Optimization, Simulation and Inference". ***AISTATS 2025***. 
+- P Chang\*, N Loka\*, **D Huang**\*, U Remes, S Kaski, L Acerbi. "Amortized Probabilistic Conditioning for Optimization, Simulation and Inference". ***AISTATS 2025***. ([paper](https://arxiv.org/abs/2410.15320), [code](https://github.com/acerbilab/amortized-conditioning-engine), [website](https://acerbilab.github.io/amortized-conditioning-engine/))
 
-- A Bharti, **D Huang**, S Kaski, F-X Briol. "Cost-aware Simulation-based Inference". ***AISTATS 2025***.
+- A Bharti, **D Huang**, S Kaski, F-X Briol. "Cost-aware Simulation-based Inference". ***AISTATS 2025***. ([paper](https://arxiv.org/abs/2410.07930), [code](https://github.com/huangdaolang/cost-aware-sbi))
 
-- **D Huang**, Y Guo, L Acerbi, S kaski. "Amortized Bayesian Experimental Design for Decision-Making". ***NeurIPS 2024***.
+- **D Huang**, Y Guo, L Acerbi, S kaski. "Amortized Bayesian Experimental Design for Decision-Making". ***NeurIPS 2024***. ([paper](https://proceedings.neurips.cc/paper_files/paper/2024/hash/c59f05d7ab3638b138cc61f32e1a7cd1-Abstract-Conference.html), [code](https://github.com/huangdaolang/amortized-decision-aware-bed))
 
 # 2023
 
