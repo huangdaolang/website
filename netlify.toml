@@ -1,0 +1,21 @@
+[build]
+  publish = "public"
+  command = "hugo --gc --minify"
+
+[build.environment]
+  HUGO_VERSION = "0.121.0"
+  HUGO_ENV = "production"
+  HUGO_ENABLEGITINFO = "true"
+
+# Redirects for custom domain
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# Force HTTPS
+[[redirects]]
+  from = "http://huangdaolang.com/*"
+  to = "https://huangdaolang.com/:splat"
+  status = 301
+  force = true 
