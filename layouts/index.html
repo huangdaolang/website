@@ -41,7 +41,11 @@
             {{ end }}
         </section>
 
-
+        {{- /* Visitor Map Section */ -}}
+        <section id="visitor-map" class="visitor-map-section home-visitor-map">
+<!--            <h2>Visitor Map</h2>-->
+            <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=TaUdbKZAWGMAeOgF1lnT_ZCmxZWd9IDlH2zljpHfw78"></script>
+        </section>
 
         {{- /* Posts */ -}}
         {{- if ne $posts.enable false | and .Site.RegularPages -}}

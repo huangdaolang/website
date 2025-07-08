@@ -15,14 +15,8 @@
                 {{- . -}}
             </language>
         {{- end -}}
-        {{- with .Site.Author.email -}}
-            <managingEditor>
-                {{- . }}{{ with $.Site.Author.name }} ({{ . }}){{ end -}}
-            </managingEditor>
-            <webMaster>
-                {{- . }}{{ with $.Site.Author.name }} ({{ . }}){{ end -}}
-            </webMaster>
-        {{- end -}}
+        <managingEditor>{{- with .Site.Params.Author.email -}}{{- . }}{{- with $.Site.Params.Author.name }} ({{ . }}){{ end -}}{{- end -}}</managingEditor>
+        <webMaster>{{- with .Site.Params.Author.email -}}{{- . }}{{- with $.Site.Params.Author.name }} ({{ . }}){{ end -}}{{- end -}}</webMaster>
         {{- with .Site.Copyright -}}
             <copyright>
                 {{- . -}}

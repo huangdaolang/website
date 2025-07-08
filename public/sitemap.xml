@@ -2,10 +2,11 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://huangdaolang.com/about/</loc></url><url>
-            <loc>http://huangdaolang.com/music/</loc></url><url>
-            <loc>http://huangdaolang.com/news/</loc></url><url>
-            <loc>http://huangdaolang.com/paper/</loc></url><url>
-            <loc>http://huangdaolang.com/categories/</loc></url><url>
-            <loc>http://huangdaolang.com/</loc></url><url>
-            <loc>http://huangdaolang.com/tags/</loc></url></urlset>
+            <loc>http://localhost:1313/music/</loc></url><url>
+            <loc>http://localhost:1313/paper/</loc></url><url>
+            <loc>http://localhost:1313/about/</loc></url><url>
+            <loc>http://localhost:1313/amortized_inference/</loc></url><url>
+            <loc>http://localhost:1313/categories/</loc></url><url>
+            <loc>http://localhost:1313/</loc></url><url>
+            <loc>http://localhost:1313/news/</loc></url><url>
+            <loc>http://localhost:1313/tags/</loc></url></urlset>
