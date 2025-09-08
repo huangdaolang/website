@@ -3,7 +3,8 @@ title: "News"
 type: "page"
 ---
 
-- **2025.06**: Gave a talk at the *Accelerating statistical inference and experimental design with machine learning* workshop at the Isaac Newton Institute in Cambridge. You can check the video of the talk [here](https://www.youtube.com/live/h963soW1HUk?si=B68ZljB2coS6rIV6).
+- **2025.09**: Gave a talk at the *Seminar on Compuational Engineering* in LUT Lappeenranta.
+- **2025.06**: Gave a talk at the *Accelerating statistical inference and experimental design with machine learning* workshop at the Isaac Newton Institute in Cambridge. You can check the video of the talk [here](https://www.youtube.com/watch?v=te_h2Z09daM).
 - **2025.05**: I was awarded the Encouragement Grant by [The Finnish Foundation for Technology Promotion](https://tekniikanedistamissaatio.fi/en/).
 - **2025.01**: Our paper "PABBO: Preferential Amortized Black-Box Optimization" has been accepted by **ICLR 2025** as ***Spotlight (Top 5.1%)***!
 - **2025.01**: Two of our papers have been accepted by **AISTATS 2025**!
