@@ -1,9 +1,9 @@
 # 2025
 
-- **D Huang**, X Wen, A Bharti, S Kaski\*, L Acerbi\*. “ALINE: Joint Amortization for Bayesian Inference and Active Data Acquisition”.  arXiv:2506.07259.
+- **D Huang**, X Wen, A Bharti, S Kaski\*, L Acerbi\*. “ALINE: Joint Amortization for Bayesian Inference and Active Data Acquisition”.  ***NeurIPS 2025 (Spotlight)***. ([paper](https://arxiv.org/abs/2506.07259), [code](https://github.com/huangdaolang/aline))
 
 - P Chang, Severi R, N Loka, **D Huang**, L Acerbi. "Inference-Time Prior Adaptation in Simulation-Based Inference via Guided Diffusion Models". ***ICLR Workshop 2025 on Frontiers in Probabilistic Inference:
-Sampling Meets Learning***.
+Sampling Meets Learning***. ([paper](https://openreview.net/forum?id=WMOsDItRu4))
 
 # 2024
 
