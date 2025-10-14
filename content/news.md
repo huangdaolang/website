@@ -3,9 +3,10 @@ title: "News"
 type: "page"
 ---
 
+- **2025.10**: Gave an invited talk and short visit in [RainML lab](https://rainml.uk) at the University of Oxford.
 - **2025.09**: Our paper "ALINE: Joint Amortization for Bayesian Inference and Active Data Acquisition" has been accepted by **NeruIPS 2025** as ***Spotlight (Top 3.2%)***!
-- **2025.09**: Gave a talk at the *Seminar on Compuational Engineering* in LUT Lappeenranta.
-- **2025.06**: Gave a talk at the *Accelerating statistical inference and experimental design with machine learning* workshop at the Isaac Newton Institute in Cambridge. You can check the video of the talk [here](https://www.youtube.com/watch?v=te_h2Z09daM).
+- **2025.09**: Gave an invited talk at the *Seminar on Compuational Engineering* in LUT Lappeenranta.
+- **2025.06**: Gave an invited talk at the *Accelerating statistical inference and experimental design with machine learning* workshop at the Isaac Newton Institute in Cambridge. You can check the video of the talk [here](https://www.youtube.com/watch?v=te_h2Z09daM).
 - **2025.05**: I was awarded the Encouragement Grant by [The Finnish Foundation for Technology Promotion](https://tekniikanedistamissaatio.fi/en/).
 - **2025.01**: Our paper "PABBO: Preferential Amortized Black-Box Optimization" has been accepted by **ICLR 2025** as ***Spotlight (Top 5.1%)***!
 - **2025.01**: Two of our papers have been accepted by **AISTATS 2025**!
