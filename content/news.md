@@ -3,6 +3,7 @@ title: "News"
 type: "page"
 ---
 
+- **2025.11**: Had an amazing week attending the [Dagstuhl Seminar: Bayesian Optimisation](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/25451).
 - **2025.10**: Gave an invited talk and short visit in [RainML lab](https://rainml.uk) at the University of Oxford.
 - **2025.09**: Our paper "ALINE: Joint Amortization for Bayesian Inference and Active Data Acquisition" has been accepted by **NeruIPS 2025** as ***Spotlight (Top 3.2%)***!
 - **2025.09**: Gave an invited talk at the *Seminar on Compuational Engineering* in LUT Lappeenranta.
