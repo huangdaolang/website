@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="ALINE: Joint Amortization for Bayesian Inference and Active Data Acquisition"
+    />
+    <meta
+      name="keywords"
+      content="Bayesian Inference, Active Learning, Amortization, Transformer, Reinforcement Learning"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ALINE | Amortized Active Learning and Inference Engine</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="./static/css/main.css" />
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+  <body>
+    <header class="hero is-fullheight-with-navbar hero-aline">
+      <div class="hero-body">
+        <div class="container is-widescreen">
+          <div class="columns is-centered">
+            <div class="column is-10 has-text-centered hero-intro">
+              <p class="hero-kicker">NeurIPS 2025 · Spotlight</p>
+              <h1 class="title is-1 is-spaced">
+                ALINE: Joint Amortization for Bayesian Inference and Active Data Acquisition
+              </h1>
+              <p class="subtitle is-5">
+                We jointly amortize Bayesian inference, active learning, and Bayesian experimental design within a single Transformer architecture.
+              </p>
+              <div class="author-list">
+                <span>Daolang Huang<sup>1,2</sup></span>
+                <span>Xinyi Wen<sup>1,2,3</sup></span>
+                <span>Ayush Bharti<sup>2</sup></span>
+                <span>Samuel Kaski<sup>*1,2,4</sup></span>
+                <span>Luigi Acerbi<sup>*3</sup></span>
+              </div>
+              <div class="affiliation-list">
+                <span>ELLIS Institute Finland<sup>1</sup></span>
+                <span>Aalto University<sup>2</sup></span>
+                <span>University of Helsinki<sup>3</sup></span>
+                <span>University of Manchester<sup>4</sup></span>
+              </div>
+              <div class="cta-group is-centered">
+                <a
+                  class="button is-dark is-rounded"
+                  href="https://arxiv.org/abs/2506.07259"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>Paper</span>
+                </a>
+                <a
+                  class="button is-link is-rounded"
+                  href="https://github.com/huangdaolang/aline"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                <span class="icon"><i class="fa-brands fa-github"></i></span>
+                  <span>GitHub</span>
+                </a>
+                <a
+                  class="button is-light is-rounded"
+                  href="https://www.youtube.com/watch?v=te_h2Z09daM"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span class="icon"><i class="fa-brands fa-youtube"></i></span>
+                  <span>Video</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section intro" id="introduction">
+      <div class="container is-max-desktop">
+        <h2 class="section-title">The Challenge: Closing the Loop in Real-Time Science</h2>
+        <p class="intro-lead">
+          Imagine a drone locating survivors after a disaster. Ideally, it should strategically decide the next exploration area to maximize discovery chances, 
+          while simultaneously estimating survivor locations from incoming sensor data. Similarly, in emergency diagnosis, 
+          a doctor needs to determine the optimal sequence of tests and instantly infer the illness from unfolding results to enable timely treatment.
+          
+          These scenarios demand two critical capabilities working in tandem:
+        </p>
+        <ul class="intro-lead">
+          <li>
+            <strong>Strategic Action</strong>: Rapidly deciding which data to acquire next to maximize information.
+          </li>
+          <li>
+            <strong>Instant Understanding</strong>: Rapidly updating beliefs about unknown factors based on collected data. 
+          </li>
+        </ul>
+        <p class="intro-lead">
+          While deep learning has successfully amortized these tasks individually, the loop remains broken. Current inference networks are passive observers, 
+          while design policies often explore without updating their internal beliefs. 
+          This separation blocks the path to truly autonomous, real-time science.
+        </p>
+        <p class="intro-lead">
+          In this paper, we introduce <em>Amortized Active Learning and Inference Engine</em> (ALINE). Leveraging a Transformer trained via reinforcement learning, 
+          ALINE jointly queries informative data and refines posterior beliefs - all within a single forward pass. More importantly, ALINE introduces <em>Flexible Targeting</em>, which allows 
+          it to dynamically refocus its strategy on specific parameter subsets or predictive goals at runtime, without the need for retraining.
+        </p>
+        <div class="key-contrib">
+          <h3>Key Capabilities</h3>
+          <div class="key-card">
+            <span>Instantly select the most informative data point to acquire.</span>
+          </div>
+          <div class="key-card">
+            <span>Instantly estimate target posterior or predictive distributions.</span>
+          </div>
+          <div class="key-card">
+            <span>Flexibly adapt to specified goals without re-training.</span>
+          </div>
+        </div>
+        <figure class="method-figure">
+          <img
+            src="./static/figures/method_comparison.png"
+            alt="Comparison between ALINE and prior amortized inference or design methods"
+          />
+          <figcaption>
+            ALINE closes the loop by integrating amortized inference and data acquisition, while prior approaches solve only one side.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- <section class="section highlights">
+      <div class="container is-max-desktop">
+        <h2 class="section-title">What makes ALINE different?</h2>
+        <div class="columns is-multiline">
+          <div class="column is-4">
+            <div class="info-card">
+              <span class="info-card__icon"><i class="fas fa-brain"></i></span>
+              <h3>Joint Amortization</h3>
+              <p>
+                Unified training of inference model and acquisition policy with
+                shared representations for data efficiency.
+              </p>
+            </div>
+          </div>
+          <div class="column is-4">
+            <div class="info-card">
+              <span class="info-card__icon"
+                ><i class="fas fa-satellite-dish"></i
+              ></span>
+              <h3>Flexible Targeting</h3>
+              <p>
+                Switch between parameter subsets or predictive goals at runtime
+                using query-target cross-attention.
+              </p>
+            </div>
+          </div>
+          <div class="column is-4">
+            <div class="info-card">
+              <span class="info-card__icon"><i class="fas fa-rocket"></i></span>
+              <h3>Instant Deployment</h3>
+              <p>
+                Single forward pass to pick the next query and generate updated
+                posteriors — ideal for online experiments.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="section methodology" id="method">
+      <div class="container is-max-desktop">
+        <h2 class="section-title">
+          Method: Amortized Active Learning and Inference Engine
+        </h2>
+    
+        <!-- Problem setup & target specifier -->
+        <div class="columns">
+          <div class="column">
+            <h3 class="method-subsection-title">Problem setup</h3>
+            <p>
+              We assume a parametric conditional model
+              \(p(y \mid x, \theta)\) with parameters \(\theta\) and prior
+              \(p(\theta)\). During an episode of size \(T\), the system sequentially collects
+              a dataset \(D_T = \{(x_i, y_i)\}_{i=1}^T\), to enable accurate and rapid Bayesian inference.
+            </p>
+            <p>
+              The key idea in ALINE is to make both inference and data
+              acquisition <em>flexible</em>. To achieve this goal, we introduce a
+              <strong>target specifier</strong> \(\xi\) that tells the model what
+              it should care about in the current episode:
+            </p>
+            <ul class="feature-list">
+              <li>
+                <strong>Parameter targets</strong> \(\xi_S^\theta\):
+                the goal is to infer a subset of parameters
+                \(\theta_S = \{\theta_l : l \in S\}\). Examples include
+                focusing only on the parameters of scientific interest and
+                treating the rest as nuisance variables.
+              </li>
+              <li>
+                <strong>Predictive targets</strong> \(\xi^{y^\star}_{p_\star}\):
+                the goal is to improve the posterior predictive distribution
+                \(p(y^\star \mid x^\star, D_T)\) for test inputs
+                \(x^\star \sim p_\star(x^\star)\), e.g., a region of the
+                input space where accurate predictions matter most.
+              </li>
+            </ul>
+            <p>
+              The set of possible targets \(\Xi\) contains both parameter and
+              predictive tasks, and during training we sample \(\xi \sim p(\xi)\),
+              so ALINE learns to adapt its strategy to whatever goal is
+              specified at runtime.
+            </p>
+          </div>
+        </div>
+    
+        <!-- Workflow figure -->
+        <figure class="method-figure">
+          <img
+            src="./static/figures/workflow.png"
+            alt="Workflow of ALINE: closed loop between data acquisition and inference"
+          />
+          <figcaption>
+            Conceptual workflow of ALINE. Given the current history and target,
+            a single forward pass proposes the next query and updates the
+            approximate posterior or predictive distribution, closing the
+            loop between design and inference.
+          </figcaption>
+        </figure>
+    
+        <!-- Architecture -->
+        <div class="columns">
+          <div class="column">
+            <h3 class="method-subsection-title">Architecture</h3>
+            <p>
+              ALINE builds on Transformer Neural Processes and organizes its
+              inputs into three sets:
+            </p>
+            <ul class="feature-list">
+              <li>
+                <strong>Context set</strong> \(D_t = \{(x_i, y_i)\}_{i=1}^t\):
+                the history of queried inputs and observations.
+              </li>
+              <li>
+                <strong>Query set</strong> \(Q = \{x_n^{(q)}\}_{n=1}^N\):
+                a pool of candidate points that the policy may choose as the
+                next query.
+              </li>
+              <li>
+                <strong>Target set</strong> \(T = \{\xi\}\):
+                an embedding of the current inference goal (parameter subset
+                or predictive task).
+              </li>
+            </ul>
+            <p>
+              Each element is passed through embedding layers, then processed
+              by shared Transformer layers. Self-attention captures
+              dependencies inside the context set, while cross-attention lets
+              query and target tokens attend to the encoded context.
+            </p>
+            <p>
+              To support <em>flexible targeting</em>, ALINE adds an extra
+              query–target cross-attention block: candidate queries explicitly
+              attend to the target tokens, so their representation encodes
+              <em>how informative this point is for the current goal</em>.
+            </p>
+            <p>
+              On top of the shared backbone, ALINE uses two specialized
+              output heads:
+            </p>
+            <ul class="feature-list">
+              <li>
+                An <strong>inference head</strong> \(q_\phi\) that outputs
+                approximate marginal posteriors over parameters or predictive
+                distributions, parameterized as a Gaussian mixture.
+              </li>
+              <li>
+                An <strong>acquisition head</strong> \(\pi_\psi\) that
+                assigns a score or probability to each candidate in the query
+                set and samples the next input \(x_{t+1}\).
+              </li>
+            </ul>
+            
+            <figure class="method-figure" style="margin-top: 2.5rem;">
+              <img
+                src="./static/figures/architecture.png"
+                alt="ALINE architecture with context, query and target sets, transformer backbone, and two heads"
+              />
+              <figcaption>
+                ALINE architecture. Context, query and target sets are
+                embedded and processed by shared Transformer layers. The
+                inference head performs approximate Bayesian inference, while
+                the acquisition head outputs a policy over candidate queries.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+    
+        <!-- Training objectives -->
+        <div class="columns">
+          <div class="column">
+            <h3 class="method-subsection-title">Training objectives</h3>
+            <p>
+              The inference head is trained with standard negative
+              log-likelihood objectives. For a parameter target
+              \(\xi_S^\theta\) we minimize
+            </p>
+            <div class="math-block">
+              $$
+              \mathcal{L}_S^\theta(\phi)
+              = - \mathbb{E}_{p(\theta)p(D_T \mid \theta)}
+              \left[ \sum_{l \in S}
+              \log q_\phi(\theta_l \mid D_T) \right],
+              $$
+            </div>
+            <p>
+              which encourages the marginals \(q_\phi(\theta_l \mid D_T)\) to
+              match the true posterior over the parameters of interest. For a
+              predictive target \(\xi^{y^\star}_{p_\star}\) we draw target
+              inputs \(x^\star \sim p_\star(x^\star)\) and minimize
+            </p>
+            <div class="math-block">
+              $$
+              \mathcal{L}^{y^\star}_{p_\star}(\phi)
+              = - \mathbb{E}_{p(\theta)p(D_T \mid \theta)
+              p_\star(x^\star)p(y^\star \mid x^\star,\theta)}
+              \left[
+              \log q_\phi(y^\star \mid x^\star, D_T)
+              \right].
+              $$
+            </div>
+            <p>
+              These losses drive the inference head to approximate either the
+              posterior or the posterior predictive distribution, and they
+              also provide the learning signal used to train the acquisition
+              policy.
+            </p>
+            <p>
+              For the acquisition head we do not optimize the true trajectory-level
+              information gain directly, which would be intractable. Instead,
+              we form <em>variational lower bounds</em> using the approximate
+              distributions provided by \(q_\phi\).
+              For a parameter target \(\xi_S^\theta\) the objective is
+            </p>
+            <div class="math-block">
+              $$
+              \mathcal{J}_S^\theta(\psi)
+              = \mathbb{E}_{p(\theta)p(D_T \mid \pi_\psi,\theta)}
+              \left[ \sum_{l \in S}
+              \log q_\phi(\theta_l \mid D_T) \right]
+              + H[p(\theta_S)],
+              $$
+            </div>
+            <p>
+              and for a predictive target \(\xi^{y^\star}_{p_\star}\)
+            </p>
+            <div class="math-block">
+              $$
+              \mathcal{J}^{y^\star}_{p_\star}(\psi)
+              = \mathbb{E}_{p(\theta)p(D_T \mid \pi_\psi,\theta)
+              p_\star(x^\star)p(y^\star \mid x^\star,\theta)}
+              \left[
+              \log q_\phi(y^\star \mid x^\star, D_T)
+              \right]
+              + \mathbb{E}_{p_\star(x^\star)}
+              [H[p(y^\star \mid x^\star)]].
+              $$
+            </div>
+            <p>
+              Both objectives are lower bounds on the corresponding
+              trajectory-level expected information gain. As the inference
+              head becomes more accurate, these bounds tighten and the policy
+              receives a more faithful reward signal.
+            </p>
+          </div>
+        </div>
+    
+        <!-- RL training / self-estimated information gain -->
+        <div class="columns">
+          <div class="column">
+            <h3 class="method-subsection-title">Learning to query with self-estimated information gain</h3>
+            <p>
+              We train the acquisition head as a policy network using
+              policy-gradient reinforcement learning. Instead of a single
+              terminal reward, ALINE uses a dense per-step reward that
+              measures how much the inference head improved after observing
+              the new data point \((x_t, y_t)\).
+            </p>
+            <p>
+              Concretely, if the current target is \(\xi_S^\theta\), the
+              reward at step \(t\) is the increase in average log-probability
+              that \(q_\phi\) assigns to the true parameters of interest:
+            </p>
+            <div class="math-block">
+              $$
+              R_t(\xi_S^\theta)
+              = \frac{1}{|S|}
+              \sum_{l \in S}
+              \Big[
+              \log q_\phi(\theta_l \mid D_t)
+              - \log q_\phi(\theta_l \mid D_{t-1})
+              \Big],
+              $$
+            </div>
+            <p>
+              and an analogous definition is used for predictive targets
+              based on the change in log predictive density.
+              The policy \(\pi_\psi\) is then updated to maximize the
+              discounted return \(\sum_{t=1}^T \gamma^t R_t(\xi)\),
+              while gradients from the policy loss are not propagated back
+              through the inference head.
+            </p>
+            <p>
+              In practice we first warm up the model by training only the
+              inference head with randomly sampled queries. After this phase
+              the policy and inference heads are trained jointly, leading to
+              a single Transformer that can both propose informative queries
+              and instantly perform Bayesian inference for a wide range of
+              targets.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section applications" id="applications">
+      <div class="container is-max-desktop">
+        <h2 class="section-title">Applications and Experimental Results</h2>
+        <div class="experiment-block" id="active-learning">
+          <div class="experiment-header">
+            <h3>Active Learning for Regression</h3>
+            <p>
+              To efficiently learn an unknown function, we need to sequentially select the most informative points to query.
+              We pre-train ALINE entirely on diverse synthetic functions sampled from GP priors, then evaluate on both
+              in-distribution draws and out-of-distribution benchmarks (such as Gramacy) to assess generalization.
+            </p>
+          </div>
+          <div class="columns is-variable is-6 is-vcentered video-grid">
+          <div class="column">
+            <div class="video-card">
+              <video
+                class="demo-video"
+                src="./static/videos/synthetic_1d.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+              ></video>
+              <div class="video-card__body">
+                <h3>Synthetic 1D GP Function</h3>
+              </div>
+            </div>
+          </div>
+          <div class="column">
+            <div class="video-card">
+              <video
+                class="demo-video"
+                src="./static/videos/gramacy.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+              ></video>
+              <div class="video-card__body">
+                <h3>Gramacy Benchmark Function</h3>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="result-quantitative">
+            <p class="result-text-full">
+              We compare against standard GP-based methods (GP-US, GP-EPIG, etc.) and the amortized baseline ACE. ALINE
+              outperforms other methods on most out-of-distribution benchmarks.
+            </p>
+            <figure class="result-figure">
+              <img
+                class="result-embed"
+                src="./static/figures/al_main.png"
+                alt="Active learning quantitative comparisons"
+              />
+              <figcaption class="result-caption">
+                Figure: RMSE (↓) over query steps on synthetic and benchmark functions. Shaded areas denote 95% CI.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        
+        <!-- Spacer for visual separation -->
+        <!-- <div style="height: 40px;"></div> -->
+        
+        <!-- Interactive Posterior Visualization -->
+        <div class="experiment-block" id="flexible-targeting-demo">
+          <div class="experiment-header">
+            <p>
+              We then test ALINE's unique ability to switch its goal at runtime - without retraining - 
+              to infer the underlying GP's hyper-parameters (e.g., lengthscale, output scale).
+            </p>
+          </div>
+          <div class="columns is-vcentered">
+            <div class="column is-7" style="display: flex; justify-content: flex-end;">
+              <div class="demo-widget" style="max-width: 550px; width: 100%;">
+                <div class="demo-output">
+                  <p class="demo-output__label">Step <span id="demo-step">1</span></p>
+                  <p id="demo-text">Starting exploration: posterior beliefs are diffuse.</p>
+                  <div class="progress-bar">
+                    <div id="demo-progress"></div>
+                  </div>
+                </div>
+                <input
+                  class="slider is-fullwidth"
+                  id="demo-range"
+                  type="range"
+                  min="0"
+                  max="2"
+                  value="0"
+                />
+              </div>
+            </div>
+            <div class="column is-5" style="padding-left: 3rem;">
+              <div class="posterior-display">
+                <img
+                  id="posterior-image"
+                  src="./static/figures/al_posterior_1.png"
+                  alt="Posterior visualization"
+                  class="posterior-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Spacer for visual separation -->
+        <!-- <div style="height: 40px;"></div> -->
+        
+        <div class="experiment-block" id="bayesian-experimental-design">
+          <div class="experiment-header">
+            <h3>Bayesian Experimental Design</h3>
+            <p>
+              We evaluate ALINE on two Bayesian experimental design tasks: Location Finding and CES.
+              We compare ALINE against both non-amortized baselines (VPCE) and state-of-the-art amortized methods (DAD, RL-BOED). 
+              Results show that ALINE achieves superior or competitive EIG while maintaining instant deployment speeds.
+            </p>
+          </div>
+          <div class="columns is-variable is-6 is-vcentered video-grid">
+            <div class="column">
+              <div class="video-card">
+                <video
+                  class="demo-video"
+                  src="./static/videos/location_finding.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  controls
+                ></video>
+                <div class="video-card__body">
+                  <h3>Location Finding</h3>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="video-card">
+                <video
+                  class="demo-video"
+                  src="./static/videos/ces.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  controls
+                ></video>
+                <div class="video-card__body">
+                  <h3>CES Task</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="result-quantitative">
+            <figure class="result-figure">
+              <img
+                class="result-embed"
+                src="./static/figures/bed.png"
+                alt="Results on BED benchmarks"
+              />
+              <figcaption class="result-caption">
+                Results on BED benchmarks.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        
+        <!-- Spacer for visual separation -->
+        <!-- <div style="height: 60px;"></div> -->
+        
+        <div class="experiment-block" id="psychometric">
+          <div class="experiment-header">
+            <h3>Psychometric Model</h3>
+            <p>
+              To demonstrate ALINE's <strong>flexible targeting</strong> capability, we consider the psychometric model, which describes the relationship between stimulus intensity and response probability. The model is governed by four parameters:
+            </p>
+            <div class="math-block">
+              $$ \psi(x; \theta, \alpha, \gamma, \lambda) = \gamma + (1 - \gamma - \lambda) \Phi\left(\frac{x - \theta}{\alpha}\right) $$
+            </div>
+            <p style="margin-top: 1rem;">
+              where \(\theta\) is the threshold, \(\alpha\) is the slope, \(\gamma\) is the guess rate, and \(\lambda\) is the lapse rate.
+            </p>
+          </div>
+          
+          <div style="margin-top: 2rem;">
+            <p>
+              <strong>When the goal is to estimate threshold (\(\theta\)) and slope (\(\alpha\)):</strong>
+              ALINE performs comparably to the baselines. Its query strategy concentrates stimuli near the threshold region.
+            </p>
+            <p>
+              <strong>When the goal is to estimate guess rate (\(\gamma\)) and lapse rate (\(\lambda\)):</strong>
+              QUEST+ performs sub-optimally, while ALINE and Psi-marginal achieve significantly better accuracy. 
+              ALINE now selects 'easy' stimuli at extreme values to best reveal biases and lapses.
+            </p>
+          </div>
+          
+          <div class="result-quantitative">
+            <figure class="result-figure">
+              <img
+                class="result-embed"
+                src="./static/figures/psychometric.png"
+                alt="Psychometric function estimation results"
+              />
+              <figcaption class="result-caption">
+                Performance comparison on psychometric function estimation with different parameter targets.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+    </section>
+
+    
+
+    <section class="section bibtex" id="bibtex">
+      <div class="container is-max-desktop">
+        <h2 class="section-title">BibTeX</h2>
+        <pre class="bibtex-block">
+@inproceedings{huang2025aline,
+  title   = {ALINE: Joint Amortization for Bayesian Inference and Active Data Acquisition},
+  author  = {Huang, Daolang and Wen, Xinyi and Bharti, Ayush and Kaski, Samuel and Acerbi, Luigi},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year    = {2025}
+}
+        </pre>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          @ 2025 Daolang Huang, Xinyi Wen, Ayush Bharti, Samuel Kaski, Luigi Acerbi.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const steps = [
+        {
+          step: 1,
+          text: "After 1 query, the posteriors are still quite uncertain.",
+          progress: 3,
+          image: "./static/figures/al_posterior_1.png"
+        },
+        {
+          step: 15,
+          text: "After 15 queries, the posteriors are more concentrated.",
+          progress: 50,
+          image: "./static/figures/al_posterior_15.png"
+        },
+        {
+          step: 30,
+          text: "After 30 queries, the posteriors are even more concentrated.",
+          progress: 100,
+          image: "./static/figures/al_posterior_30.png"
+        }
+      ];
+
+      const stepEl = document.getElementById("demo-step");
+      const textEl = document.getElementById("demo-text");
+      const progressEl = document.getElementById("demo-progress");
+      const rangeEl = document.getElementById("demo-range");
+      const imageEl = document.getElementById("posterior-image");
+
+      function updateDemo(index) {
+        const payload = steps[index];
+        stepEl.textContent = payload.step;
+        textEl.textContent = payload.text;
+        progressEl.style.width = payload.progress + "%";
+        imageEl.src = payload.image;
+      }
+
+      rangeEl.addEventListener("input", (event) => {
+        updateDemo(parseInt(event.target.value, 10));
+      });
+
+      updateDemo(0);
+    </script>
+  </body>
+</html>
+
