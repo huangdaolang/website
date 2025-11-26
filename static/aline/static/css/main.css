@@ -606,12 +606,116 @@ body {
   background: #ffffff;
 }
 
+.bibtex-container {
+  position: relative;
+}
+
 .bibtex-block {
   background: #0f1221;
   color: #f6f7fb;
   padding: 1.5rem;
   border-radius: 16px;
   overflow-x: auto;
+  margin: 0;
+}
+
+.copy-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #f6f7fb;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.copy-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.copy-button.copied {
+  background: var(--secondary-accent);
+  color: var(--text-dark);
+  border-color: var(--secondary-accent);
+}
+
+.copy-button .fa-copy {
+  font-size: 1rem;
+}
+
+.references {
+  background: #ffffff;
+}
+
+.references-list {
+  list-style: none;
+  counter-reset: ref-counter;
+  padding-left: 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.references-list li {
+  counter-increment: ref-counter;
+  margin-bottom: 1.25rem;
+  padding-left: 3rem;
+  position: relative;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+
+.references-list li::before {
+  content: "[" counter(ref-counter) "]";
+  position: absolute;
+  left: 0;
+  font-weight: 600;
+  color: var(--primary-accent);
+}
+
+.ref-authors {
+  font-weight: 500;
+}
+
+.ref-title {
+  font-style: italic;
+}
+
+.ref-venue {
+  color: var(--muted);
+}
+
+.acknowledgment {
+  background: #f4f6ff;
+}
+
+.acknowledgment-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.acknowledgment-text a {
+  color: var(--primary-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.acknowledgment-text a:hover {
+  border-bottom-color: var(--primary-accent);
 }
 
 .footer {

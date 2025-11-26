@@ -11,7 +11,7 @@
       content="Bayesian Inference, Active Learning, Amortization, Transformer, Reinforcement Learning"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ALINE | Amortized Active Learning and Inference Engine</title>
+    <title>ALINE: Joint Amortization for Bayesian Inference and Active Data Acquisition</title>
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com"
@@ -128,12 +128,16 @@
           </li>
         </ul>
         <p class="intro-lead">
-          While deep learning has successfully amortized these tasks individually, the loop remains broken. Current inference networks are passive observers, 
-          while design policies often explore without updating their internal beliefs. 
+          While deep learning has successfully amortized these tasks individually, the loop remains broken. 
+          <em>Amortized Bayesian inference</em> methods, such as Neural Processes [1, 2, 3], Prior-data Fitted Networks [4, 5], and Neural Posterior Estimation [6],
+          offer rapid updates but are typically passive observers, unable to strategize data collection. 
+          Conversely, Amortized Experimental Design (BED) [7, 8, 9] excels at picking informative data points but often lacks the mechanism to perform efficient, instant inference updates after every step.
           This separation blocks the path to truly autonomous, real-time science.
         </p>
         <p class="intro-lead">
-          In this paper, we introduce <em>Amortized Active Learning and Inference Engine</em> (ALINE). Leveraging a Transformer trained via reinforcement learning, 
+          In this paper, we introduce <em>Amortized Active Learning and Inference Engine</em> (ALINE). 
+          This work builds on our previous work for flexible amortized inference, extending the architecture of the <a href="https://acerbilab.github.io/amortized-conditioning-engine/" target="_blank">Amortized Conditioning Engine (ACE)</a> [3] to the active setting.
+          Leveraging a Transformer trained via reinforcement learning, 
           ALINE jointly queries informative data and refines posterior beliefs - all within a single forward pass. More importantly, ALINE introduces <em>Flexible Targeting</em>, which allows 
           it to dynamically refocus its strategy on specific parameter subsets or predictive goals at runtime, without the need for retraining.
         </p>
@@ -402,7 +406,7 @@
             </div>
             <p>
               Both objectives are lower bounds on the corresponding
-              trajectory-level expected information gain. As the inference
+              trajectory-level EIG and EPIG [10]. As the inference
               head becomes more accurate, these bounds tighten and the policy
               receives a more faithful reward signal.
             </p>
@@ -505,7 +509,7 @@
           </div>
           <div class="result-quantitative">
             <p class="result-text-full">
-              We compare against standard GP-based methods (GP-US, GP-EPIG, etc.) and the amortized baseline ACE. ALINE
+              We compare against standard GP-based methods (GP-US, GP-EPIG [10], etc.) and the amortized baseline ACE. ALINE
               outperforms other methods on most out-of-distribution benchmarks.
             </p>
             <figure class="result-figure">
@@ -674,14 +678,71 @@
     <section class="section bibtex" id="bibtex">
       <div class="container is-max-desktop">
         <h2 class="section-title">BibTeX</h2>
-        <pre class="bibtex-block">
-@inproceedings{huang2025aline,
+        <div class="bibtex-container">
+          <button class="copy-button" id="copy-bibtex-btn" aria-label="Copy BibTeX">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+          <pre class="bibtex-block" id="bibtex-code">@inproceedings{huang2025aline,
   title   = {ALINE: Joint Amortization for Bayesian Inference and Active Data Acquisition},
   author  = {Huang, Daolang and Wen, Xinyi and Bharti, Ayush and Kaski, Samuel and Acerbi, Luigi},
   booktitle = {Advances in Neural Information Processing Systems},
   year    = {2025}
-}
-        </pre>
+}</pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section references" id="references">
+      <div class="container is-max-desktop">
+        <h2 class="section-title">References</h2>
+        <ol class="references-list">
+          <li>
+            Garnelo M, Rosenbaum D, Maddison C, Ramalho T, Saxton D, Shanahan M, Teh Y W, Rezende D, Eslami S A. Conditional neural processes. In International conference on machine learning, 2018.
+          </li>
+          <li>
+            Nguyen T, Grover A. Transformer Neural Processes: Uncertainty-aware meta learning via sequence modeling. In International conference on machine learning, 2022.
+          </li>
+          <li>
+            Chang P E, Loka N, Huang D, Remes U, Kaski S, Acerbi L. Amortized Probabilistic Conditioning for Optimization, Simulation and Inference. In International Conference on Artificial Intelligence and Statistics, 2025.
+          </li>
+          <li>
+            Müller S, Hollmann N, Arango S P, Grabocka J, Hutter F. Transformers Can Do Bayesian Inference. In International conference on learning representations, 2022.
+          </li>
+          <li>
+            Hollmann N, Müller S, Purucker L, Krishnakumar A, Körfer M, Hoo S B, Schirrmeister R T, Hutter F. Accurate predictions on small data with a tabular foundation model. Nature, 2025.
+          </li>
+          <li>
+            Papamakarios G, Murray I. Fast ε-free inference of simulation models with Bayesian conditional density estimation. Advances in neural information processing systems, 2016.
+          </li>
+          <li>
+            Foster A, Ivanova D R, Malik I, Rainforth T. Deep adaptive design: Amortizing sequential Bayesian experimental design. In International conference on machine learning, 2021.
+          </li>
+          <li>
+            Blau T, Bonilla E V, Chades I, Dezfouli A. Optimizing sequential experimental design with deep reinforcement learning. In International conference on machine learning, 2022.
+          </li>
+          <li>
+            Huang D, Guo Y, Acerbi L, Kaski S. Amortized Bayesian Experimental Design for Decision-Making. In Advances in Neural Information Processing Systems, 2024.
+          </li>
+          <li>
+            Smith F B, Kirsch A, Farquhar S, Gal Y, Foster A, Rainforth T. Prediction-oriented Bayesian active learning. In International conference on artificial intelligence and statistics, 2023.
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <section class="section acknowledgment" id="acknowledgment">
+      <div class="container is-max-desktop">
+        <h2 class="section-title">Acknowledgments</h2>
+        <p class="acknowledgment-text">
+          This work was supported by the <a href="https://www.ellisinstitute.fi/" target="_blank" rel="noopener noreferrer">ELLIS Institute Finland</a>, the Research Council of Finland (grants 358980 and 356498 and 
+          Flagship programme: <a href="https://fcai.fi/" target="_blank" rel="noopener noreferrer">Finnish Center for Artificial Intelligence FCAI</a>); Business Finland 
+          (project 3576/31/2023); the UKRI Turing AI World-Leading Researcher Fellowship [EP/W002973/1]. 
+          The authors thank Finnish Computing Competence Infrastructure (FCCI), Aalto Science-IT project, 
+          and CSC–IT Center for Science, Finland, for the computational and data storage resources provided, 
+          including access to the LUMI supercomputer.
+        </p>
       </div>
     </section>
 
@@ -734,6 +795,30 @@
       });
 
       updateDemo(0);
+
+      // BibTeX copy functionality
+      const copyBtn = document.getElementById("copy-bibtex-btn");
+      const bibtexCode = document.getElementById("bibtex-code");
+
+      copyBtn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(bibtexCode.textContent);
+          
+          // Change button text to "Copied!"
+          const copyText = copyBtn.querySelector(".copy-text");
+          const originalText = copyText.textContent;
+          copyText.textContent = "Copied!";
+          copyBtn.classList.add("copied");
+
+          // Reset after 2 seconds
+          setTimeout(() => {
+            copyText.textContent = originalText;
+            copyBtn.classList.remove("copied");
+          }, 2000);
+        } catch (err) {
+          console.error("Failed to copy: ", err);
+        }
+      });
     </script>
   </body>
 </html>
