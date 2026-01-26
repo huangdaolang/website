@@ -1,8 +1,10 @@
 # 2025
 
-- Y Yang, S Rissanen, P Chang, N Loka, **D Huang**, A Solin, M Heinonen, L Acerbi. "PriorGuide: Test-Time Prior Adaptation for Simulation-Based Inference". arXiv:2510.13763. ([paper](https://arxiv.org/abs/2510.13763))
+- X Zhang, C Hassan, J Martinelli, **D Huang**, S Kaski. "In-Context Multi-Objective Optimization". ***ICLR 2026***. ([paper](https://arxiv.org/abs/2512.11114))
 
-- C Hassan, N Loka, C Li, **D Huang**, P Chang, Y Yang, F Silvestrin, S Kaski, L Acerbi. "Efficient Autoregressive Inference for Transformer Probabilistic Models". arXiv:2510.09477.([paper](https://arxiv.org/abs/2510.09477))
+- Y Yang, S Rissanen, P Chang, N Loka, **D Huang**, A Solin, M Heinonen, L Acerbi. "PriorGuide: Test-Time Prior Adaptation for Simulation-Based Inference". ***ICLR 2026***. ([paper](https://arxiv.org/abs/2510.13763))
+
+- C Hassan, N Loka, C Li, **D Huang**, P Chang, Y Yang, F Silvestrin, S Kaski, L Acerbi. "Efficient Autoregressive Inference for Transformer Probabilistic Models". ***ICLR 2026***.([paper](https://arxiv.org/abs/2510.09477))
 
 - **D Huang**, X Wen, A Bharti, S Kaski\*, L Acerbi\*. “ALINE: Joint Amortization for Bayesian Inference and Active Data Acquisition”.  ***NeurIPS 2025 (Spotlight)***. ([paper](https://arxiv.org/abs/2506.07259), [code](https://github.com/huangdaolang/aline))
 

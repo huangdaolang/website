@@ -3,6 +3,10 @@ title: "News"
 type: "page"
 ---
 
+- **2026.01**: Three papers have been accepted by **ICLR 2026**!
+  - [In-Context Multi-Objective Optimization](https://arxiv.org/abs/2512.11114)
+  - [PriorGuide: Test-Time Prior Adaptation for Simulation-Based Inference](https://arxiv.org/abs/2510.13763)
+  - [Efficient Autoregressive Inference for Transformer Probabilistic Models](https://arxiv.org/abs/2510.09477)
 - **2025.11**: Had an amazing week attending the [Dagstuhl Seminar: Bayesian Optimisation](https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/25451).
 - **2025.10**: Gave an invited talk and short visit in [RainML lab](https://rainml.uk) at the University of Oxford.
 - **2025.09**: Our paper "ALINE: Joint Amortization for Bayesian Inference and Active Data Acquisition" has been accepted by **NeruIPS 2025** as ***Spotlight (Top 3.2%)***!
