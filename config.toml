@@ -159,7 +159,7 @@ theme = 'LoveIt'
     Email = "daolang.huang@aalto.fi"
     Googlescholar = "user=2togGHoAAAAJ"
     Twitter = "DaolangHuang"
-    Zhihu = "donaldhwang"
+    # Zhihu = "donaldhwang"
     Linkedin = "daolanghuang"
 
 # Hugo 解析文档的配置

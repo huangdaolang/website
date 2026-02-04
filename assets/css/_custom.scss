@@ -47,3 +47,12 @@
 .single .content {
   padding-bottom: 100px;
 }
+
+// Chinese name styling with calligraphy font
+.chinese-name {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 1.1em;
+  margin-left: 0.4em;
+  opacity: 0.85;
+  font-weight: normal;
+}
