@@ -32,6 +32,50 @@
   margin-top: 3rem; /* 调整这个值来增加或减少间距 */
 }
 
+.page.home .home-avatar a {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.page.home .home-avatar img {
+  background: linear-gradient(135deg, rgba(205, 223, 255, 0.9), rgba(245, 248, 255, 0.95));
+}
+
+.page.home .about-section,
+.page.home .news-section {
+  max-width: 860px;
+  margin: 0 auto 2rem;
+  padding: 1.6rem 1.8rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(10px);
+
+  [theme=dark] & {
+    border-color: rgba(148, 163, 184, 0.18);
+    background: rgba(17, 24, 39, 0.72);
+    box-shadow: 0 24px 64px rgba(2, 6, 23, 0.28);
+  }
+}
+
+.page.home .about-section h2,
+.page.home .news-section h2 {
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+}
+
+.page.home .news-content > ul {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+.page.home .news-content li + li {
+  margin-top: 0.85rem;
+}
+
 .justify-text {
   text-align: justify;
 }
@@ -41,6 +85,10 @@
   margin: 0 auto; // Center the map
   max-width: 300px; // Set a max-width for the map container
   padding: 20px; // Add some padding around
+}
+
+.page.home .visitor-map-section {
+  margin-top: 1rem;
 }
 
 // Add padding to the bottom of single page content

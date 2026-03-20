@@ -6,9 +6,17 @@
     {{- end -}}
     {{- if $avatar -}}
     <div class="home-avatar">
-        <div href="/about/" title="About">
-            {{- dict "Src" $avatar "Alt" "Avatar" | partial "plugin/img.html" -}}
-        </div>
+        <a href="/about/" title="About" aria-label="About">
+            <img
+                src="{{ $avatar | safeURL }}"
+                alt="Avatar"
+                title="Avatar"
+                width="480"
+                height="480"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async">
+        </a>
     </div>
     {{- end -}}
 
