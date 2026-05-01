@@ -1,3 +1,7 @@
+# 2026
+
+- Y Guo, **D Huang**, X Zhang, S Kaski, A Bharti. "Constrained Bayesian Experimental Design via Online Planning". ***ICML 2026***.
+
 # 2025
 
 - X Zhang, C Hassan, J Martinelli, **D Huang**, S Kaski. "In-Context Multi-Objective Optimization". ***ICLR 2026***. ([paper](https://arxiv.org/abs/2512.11114))

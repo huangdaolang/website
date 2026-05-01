@@ -3,6 +3,7 @@ title: "News"
 type: "page"
 ---
 
+- **2026.05**: Our paper "Constrained Bayesian Experimental Design via Online Planning" has been accepted by **ICML 2026**!
 - **2026.02**: Started a research visit at the [RainML group](https://rainml.uk) at the University of Oxford.
 - **2026.01**: Three papers have been accepted by **ICLR 2026**!
   - [In-Context Multi-Objective Optimization](https://arxiv.org/abs/2512.11114)
