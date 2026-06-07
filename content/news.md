@@ -3,8 +3,8 @@ title: "News"
 type: "page"
 ---
 
-- **2026.05**: Our paper "Constrained Bayesian Experimental Design via Online Planning" has been accepted by **ICML 2026**!
-- **2026.02**: Started a research visit at the [RainML group](https://rainml.uk) at the University of Oxford.
+- **2026.05**: Our paper "Constrained Bayesian Experimental Design via Online Planning" has been accepted by **ICML 2026**, and I haven been selected as *Gold Reviewer*!
+- **2026.02**: Started a 3-month research visit at the [RainML group](https://rainml.uk) at the University of Oxford, supervised by Prof. Tom Rainforth.
 - **2026.01**: Three papers have been accepted by **ICLR 2026**!
   - [In-Context Multi-Objective Optimization](https://arxiv.org/abs/2512.11114)
   - [PriorGuide: Test-Time Prior Adaptation for Simulation-Based Inference](https://arxiv.org/abs/2510.13763)

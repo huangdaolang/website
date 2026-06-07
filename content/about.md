@@ -8,4 +8,4 @@ Daolang is a doctoral student co-supervised by [Samuel Kaski](https://kaski-lab.
 
 [Click here](/cv.pdf) to see my latest *CV* (last update: January 2026).
 
-**Research interests**: amortized inference, simulation-based inference, Bayesian optimization, Bayesian experimental design, meta-learning, neural processes.
+**Research interests**: amortized inference, Bayesian experimental design, simulation-based inference, Bayesian optimization, prior-data fitted networks (PFNs), neural processes.
