@@ -93,7 +93,7 @@ theme = 'LoveIt'
       # 主页显示的网站标题 (支持 HTML 格式)
       title = "Daolang Huang"
       # 主页显示的网站副标题 (允许 HTML 格式)
-      subtitle = "\"Amortize everything...\""
+      subtitle = "\"Why solve it twice?\""
       # 是否为副标题显示打字机动画
       typeit = false
       # 是否显示社交账号
