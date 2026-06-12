@@ -110,6 +110,14 @@ theme = 'LoveIt'
 
 
 [menu]
+  [[menu.main]]
+    weight = 1
+    identifier = "cv"
+    pre = ""
+    post = ""
+    name = "CV"
+    url = "/cv/"
+    title = "CV"
 #  [[menu.main]]
 #    weight = 1
 #    identifier = "news"
@@ -136,14 +144,6 @@ theme = 'LoveIt'
     name = "Music"
     url = "/music/"
     title = "RGB music"
-#  [[menu.main]]
-#    weight = 4
-#    identifier = "cv"
-#    pre = ""
-#    post = ""
-#    name = "CV"
-#    url = "/cv.pdf"
-#    title = "My CV"
 #  [[menu.main]]
 #    weight = 5
 #    identifier = "tags"

@@ -1,0 +1,19 @@
+{{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
+
+{{- define "content" -}}
+    <div class="page cv-page">
+        <div class="cv-toolbar">
+            <h1>Curriculum Vitae</h1>
+            <a href="{{ `/cv.pdf` | relURL }}" target="_blank" rel="noopener">Open PDF</a>
+        </div>
+        <iframe
+            class="cv-viewer"
+            src="{{ `/cv.pdf` | relURL }}#view=FitH"
+            title="Daolang Huang's CV">
+        </iframe>
+        <p class="cv-fallback">
+            PDF preview unavailable.
+            <a href="{{ `/cv.pdf` | relURL }}" target="_blank" rel="noopener">Open the PDF directly</a>.
+        </p>
+    </div>
+{{- end -}}
