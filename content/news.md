@@ -3,6 +3,7 @@ title: "News"
 type: "page"
 ---
 
+- **2026.06**: Started a 6-month research scientist internship at **Meta**.
 - **2026.05**: Our paper "Constrained Bayesian Experimental Design via Online Planning" has been accepted by **ICML 2026**, and I haven been selected as *Gold Reviewer*!
 - **2026.02**: Started a 3-month research visit at the [RainML group](https://rainml.uk) at the University of Oxford, supervised by Prof. Tom Rainforth.
 - **2026.01**: Three papers have been accepted by **ICLR 2026**!
